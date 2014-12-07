@@ -1,7 +1,7 @@
 var http = require('http');
 http.createServer(function (request, response) {
     if ( request.method === 'POST' ) {
-        var buffer = ''; // todo: change code to handle different encodings, etc
+        var buffer = ''; // todo: @bhanu - change code to handle different encodings, etc
         request.on('data', function (chunk) {
             buffer += chunk;
         });
@@ -16,7 +16,7 @@ http.createServer(function (request, response) {
     }
 }).listen(5000, function () {
     /**
-     * test code on bash using $curl -POST "http://localhost:5000" --data "name=jacob&age=30"
+     * test code on bash using $curl -POST "http://localhost:5000" --data "name=bhanu&age=31"
      */
     console.log('listening on port: ', 5000);
 });
